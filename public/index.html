@@ -4,10 +4,32 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js"></script>
 
 <body>
-    <div id="navigation"></div>        
-    <main role="main" class="container" style="margin-top:20px">
+        <div id="navigation"></div>        
+
+    <nav aria-label="breadcrumb">
+        
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><H3>Bad Bank</H3></li>
+            <li class="breadcrumb-item"><a href="#" onclick="loadCreateAccount ()">Create Account</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="loadLogin()">Login</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="loadDeposit()">Deposit</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="loadWithdraw()">Withdraw</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="loadTransactions()">Transactions</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="loadBalance()">Balance</a></li>
+            <li class="breadcrumb-item">AllData</li>
+        </ol>
+    </nav>
+    <p>  Lots more to do here. </p> 
+    <p>  As of Friday, I have made the Create Account button adding the account to the DB.</p> 
+    <p>  Now,  I need to work on the rest of the buttons and functions, which I will do at the weekend</p>
+        
+
         <div id="target"></div>
-    </main>
+
+
+        <main role="main" class="container" style="margin-top:20px">
+                <div id="target"></div>
+            </main>
 </body>
 
 <script src='api/api.js'></script>

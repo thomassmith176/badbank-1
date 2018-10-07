@@ -5,27 +5,87 @@ ui.navigation = `
 `;
 
 ui.createAccount = `
-    <!-- ------------- YOUR CODE: Create Account UI ------------- --> 
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+<div class="card-header">Create Account</div>
+<div class="card-body">
+    <form>
+        <div class="form-group">
+        <label for="exampleInputName1">Name</label>
+        <input type="name" class="form-control" id="exampleInputName1" placeholder="Enter name">
+        </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary" onclick="create()">Submit</button>
+    </form>
+    
+</div>
+</div> 
+
 `;
 
 ui.login = `
-    <!-- ------------- YOUR CODE: Login UI ------------- --> 
+<div class="card text-white bg-secondary mb-3" style = "max-width: 18rem;">
+<div class="card-header">Login to Account</div>
+<div class="card-body">
+    <form>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-secondary" onclick="login()">Submit</button>
+    </form>
+</div>
+</div >
 `;
 
 ui.deposit = `
-    <!-- ------------- YOUR CODE: Deposit UI ------------- --> 
+<div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+<div class="card-header">Header</div>
+<div class="card-body">
+<h5 class="card-title">Warning card title</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+</div>
 `;
 
 ui.withdraw = `
-    <!-- ------------- YOUR CODE: Withdraw UI ------------- --> 
+<div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+<div class="card-header">Header</div>
+<div class="card-body">
+<h5 class="card-title">Success card title</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+</div>
 `;
 
 ui.transactions = `
-    <!-- ------------- YOUR CODE: Transactions UI ------------- --> 
+<div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+<div class="card-header">Header</div>
+<div class="card-body">
+<h5 class="card-title">Danger card title</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+</div>
 `;
 
 ui.balance = `
-    <!-- ------------- YOUR CODE: Balance UI ------------- --> 
+<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+<div class="card-header">Header</div>
+<div class="card-body">
+<h5 class="card-title">Info card title</h5>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+</div>
+</div>
 `;
 
 ui.default = `

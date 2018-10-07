@@ -1,0 +1,54 @@
+{
+  "posts": [
+    {
+      "accounts": [
+        {
+          "name": "Thomas Smith",
+          "email": "thomassm@mit.edu",
+          "balance": "",
+          "password": "sasd",
+          "transactions": [
+            "Account Create at Fri Oct 05 2018 20:32:42 GMT-0400 (Eastern Daylight Time)"
+          ]
+        }
+      ]
+    },
+    {
+      "accounts": [
+        {
+          "name": "Thomas Smith",
+          "email": "thomassm@mit.edu",
+          "balance": "",
+          "password": "asdads",
+          "transactions": [
+            "Account Create at Fri Oct 05 2018 20:48:33 GMT-0400 (Eastern Daylight Time)"
+          ]
+        }
+      ]
+    },
+    {
+      "accounts": [
+        {
+          "name": "Thomas Smith",
+          "email": "thomassm@mit.edu",
+          "balance": "",
+          "password": "iougojb",
+          "transactions": [
+            "Account Create at Fri Oct 05 2018 20:50:47 GMT-0400 (Eastern Daylight Time)"
+          ]
+        }
+      ]
+    }
+  ],
+  "bankdata": {
+    "accounts": [
+      {
+        "name": "",
+        "email": "",
+        "balance": 0,
+        "password": "",
+        "transactions": []
+      }
+    ]
+  }
+}
