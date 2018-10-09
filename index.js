@@ -29,7 +29,7 @@ console.log("response code 1")
     // Create account route
     var bankdata = { 
         accounts:[
-            {"name"        : req.params.name,
+            {"name"       : req.params.name,
             "email"       : req.params.email,
             "balance"     : '',
             "password"    : req.params.password,

@@ -50,40 +50,68 @@ ui.login = `
 
 ui.deposit = `
 <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
-<div class="card-header">Header</div>
+<div class="card-header">Deposit</div>
 <div class="card-body">
-<h5 class="card-title">Warning card title</h5>
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<form>
+<div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+</div>
+<div class="form-group">
+    <label for="exampleInputAmount1">Amount</label>
+    <input type="amount" class="form-control" id="exampleInputAmount1" placeholder="Amount"">
+</div>
+<button type="submit" class="btn btn-warning" onclick="deposit()">Submit</button>
+</form>
 </div>
 </div>
 `;
 
 ui.withdraw = `
 <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-<div class="card-header">Header</div>
+<div class="card-header">Withdraw</div>
 <div class="card-body">
-<h5 class="card-title">Success card title</h5>
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<form>
+<div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+</div>
+<div class="form-group">
+    <label for="exampleInputAmount1">Amount</label>
+    <input type="amount" class="form-control" id="exampleInputAmount1" placeholder="Amount"">
+</div>
+<button type="submit" class="btn btn-success" onclick="withdraw()">Submit</button>
+</form>
 </div>
 </div>
 `;
 
 ui.transactions = `
 <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-<div class="card-header">Header</div>
+<div class="card-header">Transactions</div>
 <div class="card-body">
-<h5 class="card-title">Danger card title</h5>
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<form>
+<div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+</div>
+<button type="submit" class="btn btn-danger" onclick="transactions()">Show Transactions</button>
+</form>
 </div>
 </div>
 `;
 
 ui.balance = `
 <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-<div class="card-header">Header</div>
+<div class="card-header">Show Balance</div>
 <div class="card-body">
-<h5 class="card-title">Info card title</h5>
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<form>
+<div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+</div>
+<button type="submit" class="btn btn-info" onclick="balance()">Show Balance</button>
+</form>
 </div>
 </div>
 `;
