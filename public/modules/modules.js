@@ -121,7 +121,16 @@ ui.default = `
 `;
 
 ui.allData = `
-    <!-- ------------- YOUR CODE: All Data UI ------------- --> 
+<div class="card bg-light mb-3" style="max-width: 18rem;">
+<div class="card-header">Get All Data</div>
+<div class="card-body">
+<form>
+<div class="form-group">
+</div>
+<button type="submit" class="btn btn-light" onclick="allData();">Fetch</button>
+</form>
+</div>
+</div>
 `;
 
 var target     = document.getElementById('target');

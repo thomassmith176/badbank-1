@@ -3,90 +3,12 @@
     {
       "accounts": [
         {
-          "name": "Thomas Smith",
-          "email": "thomassm@mit.edu",
-          "balance": "",
-          "password": "sasd",
-          "transactions": [
-            "Account Create at Fri Oct 05 2018 20:32:42 GMT-0400 (Eastern Daylight Time)"
-          ]
-        }
-      ]
-    },
-    {
-      "accounts": [
-        {
-          "name": "Thomas Smith",
-          "email": "thomassm@mit.edu",
-          "balance": "",
-          "password": "asdads",
-          "transactions": [
-            "Account Create at Fri Oct 05 2018 20:48:33 GMT-0400 (Eastern Daylight Time)"
-          ]
-        }
-      ]
-    },
-    {
-      "accounts": [
-        {
-          "name": "Thomas Smith",
-          "email": "thomassm@mit.edu",
-          "balance": "",
-          "password": "iougojb",
-          "transactions": [
-            "Account Create at Fri Oct 05 2018 20:50:47 GMT-0400 (Eastern Daylight Time)"
-          ]
-        }
-      ]
-    },
-    {
-      "accounts": [
-        {
-          "name": "Thomas Smith",
-          "email": "thomassm@mit.edu",
-          "balance": "",
-          "password": "iausdiusadh",
-          "transactions": [
-            "Account Create at Mon Oct 08 2018 17:54:10 GMT-0400 (Eastern Daylight Time)"
-          ]
-        }
-      ]
-    },
-    {
-      "accounts": [
-        {
-          "name": "Thomas Smith",
-          "email": "thomassm@mit.edu",
-          "balance": "",
-          "password": "qwe",
-          "transactions": [
-            "Account Create at Mon Oct 08 2018 22:22:33 GMT-0400 (Eastern Daylight Time)"
-          ]
-        }
-      ]
-    },
-    {
-      "accounts": [
-        {
-          "name": "asda",
-          "email": "asd@sdfsd.com",
-          "balance": "",
-          "password": "ewrw",
-          "transactions": [
-            "Account Create at Mon Oct 08 2018 22:51:05 GMT-0400 (Eastern Daylight Time)"
-          ]
-        }
-      ]
-    },
-    {
-      "accounts": [
-        {
           "name": "asd",
           "email": "thomassm@mit.edu",
           "balance": "",
-          "password": "asd",
+          "password": "sadasd",
           "transactions": [
-            "Account Create at Mon Oct 08 2018 22:52:45 GMT-0400 (Eastern Daylight Time)"
+            "Account Create at Tue Oct 09 2018 14:45:19 GMT-0400 (Eastern Daylight Time)"
           ]
         }
       ]
@@ -97,9 +19,9 @@
           "name": "Thomas Smith",
           "email": "thomassm@mit.edu",
           "balance": "",
-          "password": "password1111",
+          "password": "asdasd",
           "transactions": [
-            "Account Create at Mon Oct 08 2018 22:54:26 GMT-0400 (Eastern Daylight Time)"
+            "Account Create at Tue Oct 09 2018 14:46:21 GMT-0400 (Eastern Daylight Time)"
           ]
         }
       ]
@@ -110,35 +32,9 @@
           "name": "Thomas Smith",
           "email": "thomassm@mit.edu",
           "balance": "",
-          "password": "wqeqe",
-          "transactions": [
-            "Account Create at Mon Oct 08 2018 22:57:34 GMT-0400 (Eastern Daylight Time)"
-          ]
-        }
-      ]
-    },
-    {
-      "accounts": [
-        {
-          "name": "qwe",
-          "email": "thomassm@mit.edu",
-          "balance": "",
-          "password": "qwe",
-          "transactions": [
-            "Account Create at Mon Oct 08 2018 22:58:53 GMT-0400 (Eastern Daylight Time)"
-          ]
-        }
-      ]
-    },
-    {
-      "accounts": [
-        {
-          "name": "adasd",
-          "email": "thomassm@mit.edu",
-          "balance": "",
           "password": "asd",
           "transactions": [
-            "Account Create at Mon Oct 08 2018 23:05:22 GMT-0400 (Eastern Daylight Time)"
+            "Account Create at Tue Oct 09 2018 14:47:26 GMT-0400 (Eastern Daylight Time)"
           ]
         }
       ]
@@ -151,7 +47,7 @@
           "balance": "",
           "password": "sdf",
           "transactions": [
-            "Account Create at Mon Oct 08 2018 23:07:51 GMT-0400 (Eastern Daylight Time)"
+            "Account Create at Tue Oct 09 2018 14:48:14 GMT-0400 (Eastern Daylight Time)"
           ]
         }
       ]
@@ -159,25 +55,129 @@
     {
       "accounts": [
         {
-          "name": "sada",
-          "email": "asd@sdfsd.com",
-          "balance": "",
-          "password": "asd",
-          "transactions": [
-            "Account Create at Mon Oct 08 2018 23:12:14 GMT-0400 (Eastern Daylight Time)"
-          ]
-        }
-      ]
-    },
-    {
-      "accounts": [
-        {
-          "name": "sad",
+          "name": "Thomas Smith",
           "email": "thomassm@mit.edu",
           "balance": "",
-          "password": "asd",
+          "password": "wer",
           "transactions": [
-            "Account Create at Mon Oct 08 2018 23:21:02 GMT-0400 (Eastern Daylight Time)"
+            "Account Create at Tue Oct 09 2018 14:49:33 GMT-0400 (Eastern Daylight Time)"
+          ]
+        }
+      ]
+    },
+    {
+      "accounts": [
+        {
+          "name": "Thomas Smith",
+          "email": "thomassm@mit.edu",
+          "balance": "",
+          "password": "we",
+          "transactions": [
+            "Account Create at Tue Oct 09 2018 14:51:13 GMT-0400 (Eastern Daylight Time)"
+          ]
+        }
+      ]
+    },
+    {
+      "accounts": [
+        {
+          "name": "Thomas Smith",
+          "email": "thomassm@mit.edu",
+          "balance": "",
+          "password": "wer",
+          "transactions": [
+            "Account Create at Tue Oct 09 2018 14:54:42 GMT-0400 (Eastern Daylight Time)"
+          ]
+        }
+      ]
+    },
+    {
+      "accounts": [
+        {
+          "name": "Thomas Smith",
+          "email": "thomassm@mit.edu",
+          "balance": "",
+          "password": "w",
+          "transactions": [
+            "Account Create at Tue Oct 09 2018 14:57:52 GMT-0400 (Eastern Daylight Time)"
+          ]
+        }
+      ]
+    },
+    {
+      "accounts": [
+        {
+          "name": "Thomas Smith",
+          "email": "thomassm@mit.edu",
+          "balance": "",
+          "password": "s",
+          "transactions": [
+            "Account Create at Tue Oct 09 2018 15:01:47 GMT-0400 (Eastern Daylight Time)"
+          ]
+        }
+      ]
+    },
+    {
+      "accounts": [
+        {
+          "name": "Thomas Smith",
+          "email": "thomassm@mit.edu",
+          "balance": "",
+          "password": "a",
+          "transactions": [
+            "Account Create at Tue Oct 09 2018 15:03:02 GMT-0400 (Eastern Daylight Time)"
+          ]
+        }
+      ]
+    },
+    {
+      "accounts": [
+        {
+          "name": "Thomas Smith",
+          "email": "thomassm@mit.edu",
+          "balance": "",
+          "password": "w",
+          "transactions": [
+            "Account Create at Tue Oct 09 2018 15:04:01 GMT-0400 (Eastern Daylight Time)"
+          ]
+        }
+      ]
+    },
+    {
+      "accounts": [
+        {
+          "name": "Thomas Smith",
+          "email": "thomassm@mit.edu",
+          "balance": "",
+          "password": "w",
+          "transactions": [
+            "Account Create at Tue Oct 09 2018 15:04:17 GMT-0400 (Eastern Daylight Time)"
+          ]
+        }
+      ]
+    },
+    {
+      "accounts": [
+        {
+          "name": "Thomas Smith",
+          "email": "thomassm@mit.edu",
+          "balance": "",
+          "password": "er",
+          "transactions": [
+            "Account Create at Tue Oct 09 2018 15:06:11 GMT-0400 (Eastern Daylight Time)"
+          ]
+        }
+      ]
+    },
+    {
+      "accounts": [
+        {
+          "name": "Thomas Smith",
+          "email": "thomassm@mit.edu",
+          "balance": "",
+          "password": "df",
+          "transactions": [
+            "Account Create at Tue Oct 09 2018 15:07:59 GMT-0400 (Eastern Daylight Time)"
           ]
         }
       ]

@@ -15,11 +15,11 @@ app.use(express.static('public'));
 var bankdata = { 
     accounts:[
         {name        : '',
-         email       : '',
-         balance     : 0,
-         password    : '',
-         transactions: []}
-    ] 
+        email       : '',
+        balance     : 0,
+        password    : '',
+        transactions: []}
+   ] 
 };
 db.defaults({ posts: [], bankdata}).write()
 
@@ -49,20 +49,6 @@ app.get('/account/login/:email/:password', function (req, res) {
     // Login user - confirm credentials
     // If success, return account object    
     // If fail, return null
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 });
 
@@ -101,6 +87,7 @@ app.get('/account/all', function (req, res) {
     // YOUR CODE
     console.log("response code 7")
     // Return data for all accounts
+    res.send(db.get('posts').value());
 });
 
 //added by Tommy
@@ -108,4 +95,11 @@ app.get('/account/all', function (req, res) {
 // -----------------------
 app.listen(3000, function(){
     console.log('Running on Port 3000!');
+});
+
+app.get('/account/clear', function (req, res) {
+
+    // YOUR CODE
+    console.log("response code 7")
+    // Return data for all accounts
 });

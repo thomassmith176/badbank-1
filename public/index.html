@@ -10,13 +10,13 @@
         
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><H3>Bad Bank</H3></li>
-            <li class="breadcrumb-item"><a href="#" onclick="loadCreateAccount ()">Create Account</a></li>
-            <li class="breadcrumb-item"><a href="#" onclick="loadLogin()">Login</a></li>
-            <li class="breadcrumb-item"><a href="#" onclick="loadDeposit()">Deposit</a></li>
-            <li class="breadcrumb-item"><a href="#" onclick="loadWithdraw()">Withdraw</a></li>
-            <li class="breadcrumb-item"><a href="#" onclick="loadTransactions()">Transactions</a></li>
-            <li class="breadcrumb-item"><a href="#" onclick="loadBalance()">Balance</a></li>
-            <li class="breadcrumb-item">AllData</li>
+            <li class="breadcrumb-item"><a href="#" onclick="ClearStatus(); loadCreateAccount();">Create Account</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="ClearStatus(); loadLogin();">Login</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="ClearStatus(); loadDeposit();">Deposit</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="ClearStatus(); loadWithdraw();">Withdraw</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="ClearStatus(); loadTransactions();">Transactions</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="ClearStatus(); loadBalance();">Balance</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="ClearStatus(); loadAllData();">All Data</a></li>
         </ol>
     </nav>
 

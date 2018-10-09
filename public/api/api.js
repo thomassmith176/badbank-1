@@ -20,7 +20,7 @@ function create() {
                 }
                 else {
                     console.log(res);
-                    status.innerHTML = JSON.stringify(res.body);
+                    status.innerHTML = 'Your account is set up';
                 }           
             });
 }
@@ -30,10 +30,12 @@ function login() {
     //  YOUR CODE
     //  Confirm credentials on server
     // -------------------------------------
+    
     var email = document.getElementById("exampleInputEmail1").value;
     var password = document.getElementById("exampleInputPassword1").value;
    
         var status = document.getElementById('status');
+        
         var url = '/account/login/' + email + "/" + password;
         console.log(url)
         superagent
@@ -44,7 +46,7 @@ function login() {
                 }
                 else {
                     console.log(res);
-                    status.innerHTML = JSON.stringify(res.body);
+                    status.innerHTML = 'You are logged in.';
                 }           
             });
 
@@ -81,7 +83,43 @@ function balance() {
 function allData() {
     // -------------------------------------
     //  YOUR CODE
-    //  Get all data
+
+        var status = document.getElementById('status');      
+        var url = '/account/all';
+        //console.log(url)
+        superagent
+            .get(url)
+            .end(function (err, res) {
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                    console.log(res);
+                   status.innerHTML = JSON.stringify(res.body);
+                }           
+            });
+
     // -------------------------------------
 }
 
+///--------this is a function I wrote to clear the Status Div----
+function ClearStatus() {
+    // -------------------------------------
+        var status = document.getElementById('status');
+        var url = '/account/all';
+        //console.log(url)
+        superagent
+            .get(url)
+            .end(function (err, res) {
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                    console.log(res);
+                   status.innerHTML = '';
+                }           
+            });
+    // -------------------------------------
+}
+
+  
