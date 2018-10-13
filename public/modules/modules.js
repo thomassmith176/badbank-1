@@ -59,7 +59,7 @@ ui.deposit = `
 </div>
 <div class="form-group">
     <label for="exampleInputAmount1">Amount</label>
-    <input type="amount" class="form-control" id="exampleInputAmount1" placeholder="Amount"">
+    <input type="text" class="form-control" id="exampleInputAmount1" placeholder="Amount"">
 </div>
 <button type="submit" class="btn btn-warning" onclick="deposit()">Submit</button>
 </form>
