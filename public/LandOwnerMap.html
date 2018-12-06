@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<script src='api/api.js'></script>
+<script src='modules/modules.js'></script>
+<head>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js">
+	</script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKQ6z25VTkDdtA7MY3hKDOzR0tVg6gMfk&libraries=drawing&callback=initMap">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/geojson/0.5.0/geojson.min.js" type="text/javascript">
+	</script>
+	<title>Drawing Tools</title>
+	<meta content="initial-scale=1.0, user-scalable=no" name="viewport">
+	<meta charset="utf-8">
+	<style>
+	        /* Always set the map height explicitly to define the size of the div
+	         * element that contains the map. */
+	        #map {
+	          height: 100%;
+	        }
+	        /* Optional: Makes the sample page fill the window. */
+	        html, body {
+	          height: 100%;
+	          margin: 0;
+	          padding: 0;
+	        }
+	</style>
+</head>
+<body>
+	<div id="map"></div>
+	<script>
+
+	        function initMap() {
+	          var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: {lat: 42.358075, lng: -71.092037}
+	          });
+
+	          var drawingManager = new google.maps.drawing.DrawingManager({
+	            drawingMode: google.maps.drawing.OverlayType.MARKER,
+	            drawingControl: true,
+	            drawingControlOptions: {
+	              position: google.maps.ControlPosition.TOP_CENTER,
+	              drawingModes: ['polygon']
+	            }});
+	          drawingManager.setMap(map);
+
+	          google.maps.event.addListener(drawingManager, 'polygoncomplete', function (polygon) {
+	              var myshape = polygon.getPath().getArray()            
+	              var mycoord = ""
+	              var mycoordarr=[]
+	              for(var i=0;i<myshape.length;i++){
+	                var arr1=[myshape[i].lng(),myshape[i].lat()]
+	                  mycoordarr.push(arr1)
+	                };
+	                mycoordarr.push([myshape[0].lng(),myshape[0].lat()]);
+									var data =  [{
+	                  name: 'Dummy Route Name',
+	                  description: 'Dummy Route Description',
+	                  routefee: 'Dummy Route Fee - $2',
+	                  polygon: mycoordarr
+	                  }];
+	                  geoJSON_Object = GeoJSON.parse(data, {'Point': ['x', 'y'],'Polygon': 'polygon'});
+	             send_data_to_db(geoJSON_Object)
+						//	savemycoord(geoJSON_Object)
+	          });
+	        }
+	      function send_data_to_db(mycoord){
+	              var url = '/save_coords';
+	          superagent
+	                  .post(url)
+	                  .send(mycoord)
+	                  .end(function (err, res) {
+	                      if (err) {
+	                          console.log(err);
+	                      }
+	                      else {
+	                          console.log(res);
+	                   }});
+	                 }
+
+					
+
+
+	</script>
+<script>
+
+</script>
+</body>
+</html>

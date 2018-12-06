@@ -9,8 +9,10 @@
   "author": "abel@mit.edu",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "express": "^4.16.3",
+    "geojson": "^0.5.0",
     "lowdb": "^1.0.0"
   }
 }

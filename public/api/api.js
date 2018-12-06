@@ -1,4 +1,4 @@
-
+var mycoords_save={}
 function create() {
     // -------------------------------------
     //  YOUR CODE
@@ -176,4 +176,53 @@ function ClearStatus() {
     // -------------------------------------
 }
 
-        
+function getLandOwnerMap() {
+    // -------------------------------------
+    var status = document.getElementById('status');
+    status.style.height = "500px";
+    status.innerHTML = '<iframe src="/LandOwnerMap.html" width="100%" height="100%"></iframe>';
+}
+
+function getDogWalkerMap() {
+    // -------------------------------------
+    var status = document.getElementById('status');
+    status.style.height = "500px";
+    status.innerHTML = '<iframe src="/DogWalkerMap.html" width="100%" height="100%"></iframe>';
+}
+
+function getMyLocation() {
+    // -------------------------------------
+    var status = document.getElementById('status');
+    status.style.height = "500px";
+    status.innerHTML = '<iframe src="/MyLocation.html" width="100%" height="100%"></iframe>';
+}
+
+function getRouteAttributes() {
+    var name = document.getElementById("exampleInputName1").value;  // these two lines work
+    console.log(name)
+}
+
+function submitLandOwnersMap() {
+var routename = document.getElementById('routename').value;
+var routedescription = document.getElementById('routedescription').value;
+var routefee = document.getElementById('routefee').value;
+send_data_to_db(routename,routedescription,routefee)
+}
+
+function send_data_to_db(routename,routedescription,routefee){
+    var url = '/save_properties';
+    var prop={}
+    prop.name = routename
+    prop.description = routedescription
+    prop.routefee = routefee
+superagent
+        .post(url)
+        .send(prop)
+        .end(function (err, res) {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                console.log(res);
+         }});
+       }

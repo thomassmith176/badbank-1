@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/geojson/0.5.0/geojson.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKQ6z25VTkDdtA7MY3hKDOzR0tVg6gMfk&libraries=drawing&libraries=geometry&callback=initMap" async defer></script> 
+
+  <head>
+    <title>Data Layer: Event Handling</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #info-box {
+        background-color: white;
+        border: 1px solid black;
+        bottom: 30px;
+        height: 50px;
+        padding: 10px;
+        position: absolute;
+        left: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+<div id="position_lat"></div>
+<div id="position_lon"></div>
+<button onclick="getLocation()">Check if I am inside a Route</button>
+<p id="demo"></p>
+
+<script>   ///////the Get Coodinates code/////////
+
+///end of the Get Coordinates Code///////  </script>   
+</div>
+    <div id="map"></div>
+    <div id="info-box">?</div>
+    <script>
+    var x = document.getElementById("demo");
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition2);
+        } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+    function showPosition2(position) {
+        //x.innerHTML = "Latitude: " + position.coords.latitude + 
+        //"<br>Longitude: " + position.coords.longitude;
+
+        var currentLocation=new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
+        for(i=0;i<polyCheck.length;i++){
+          var contains = google.maps.geometry.poly.containsLocation(currentLocation, polyCheck[i])
+            if (contains==true){
+            alert("You are inside a route");
+            }
+        }       
+    }
+      var map;
+      var setPosition;
+      var polyCheck=[];
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: {lat: 42.358075, lng: -71.092037}
+        });    
+        var url = '/get_map';
+
+///superagent to get the main polygons////////
+        superagent
+            .get(url)
+            .end(function (err, res) {
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                  map.data.addGeoJson(res.body);
+                }           
+            });
+///end of superagent to get the main polygons///
+
+// Add some style.
+        map.data.setStyle(function(feature) {
+          return /** @type {google.maps.Data.StyleOptions} */({
+            fillColor: feature.getProperty('color'),
+            strokeWeight: 1
+          });
+        });
+
+//////// Mouseover event for the infobox/////////
+        map.data.addListener('mouseover', function(event) {
+          document.getElementById('info-box').innerText = 'Route Name: ' + event.feature.getProperty('name')  + '\n' +
+          'Route Description: ' + event.feature.getProperty('description')  + '\n' +  
+          'Route Fee: ' + event.feature.getProperty('routefee')
+        });
+        map.data.addListener('mouseout', function(event) {
+          document.getElementById('info-box').innerText =
+              "?";
+        });
+        infoWindow = new google.maps.InfoWindow;
+//////////end of mousover code////////
+
+//////second superagent code
+        var url = '/get_map';
+        superagent
+            .get(url)
+            .end(function (err, res) {
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                  var mycoord = res.body
+                  var NumPolygons = res.body.features.length
+	                var NewCoordArray = []
+	                for(var i=0;i<NumPolygons;i++){
+                      var NumPoints = res.body.features[i].geometry.coordinates[0].length
+                      for(var j=0;j<NumPoints;j++){
+                          var lon =  arr2 = res.body.features[i].geometry.coordinates[0][j][0]
+                          var lat =  arr2 = res.body.features[i].geometry.coordinates[0][j][1]
+                          let NewCoords = {   lat: lat,  lng: lon };  //creates the point object
+                          NewCoordArray.push(NewCoords) 
+                          }
+                      withinCheck(NewCoordArray) //creates the polygon array
+                      navigate()
+                      NewCoordArray = []
+                      }
+                      }
+                });
+///end of superagent code///////////
+
+
+///function to check if current location is within a polygon
+function withinCheck(NewCoordArray) {
+  if (navigator.geolocation) {
+    MyLocCoords = navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    alert("Geolocation is not supported by this browser.");
+  }
+ polyCheck.push(new google.maps.Polygon({paths: NewCoordArray})) 
+  
+}
+
+function showPosition(position) {
+  lat = position.coords.latitude
+  lon = position.coords.longitude
+}
+/////////end of "within check" function
+
+//HTML5 Geolocation Code//////////////////
+function navigate(){
+  if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+}
+/////////End of the HTML Geolocation Code/////
+
+} ///this is closing bracket for the main init code
+    </script>
+ </body>
+</html>
+
+

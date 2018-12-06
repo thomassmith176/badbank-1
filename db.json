@@ -3,12 +3,10 @@
     {
       "name": "Thomas Smith",
       "email": "thomassm@mit.edu",
-      "balance": 0,
-      "password": "a",
+      "balance": -10,
+      "password": "iuyiuh",
       "transactions": [
-        "Account Create at Fri Oct 12 2018 20:16:30 GMT-0400 (Eastern Daylight Time)",
-        "Account Login at Fri Oct 12 2018 20:18:48 GMT-0400 (Eastern Daylight Time)",
-        "Deposit Made at Fri Oct 12 2018 20:18:53 GMT-0400 (Eastern Daylight Time)"
+        "Account Create at Thu Dec 06 2018 12:30:11 GMT-0500 (Eastern Standard Time)"
       ]
     }
   ],

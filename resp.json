@@ -1,0 +1,34 @@
+{  
+   "type":"FeatureCollection",
+   "features":[  
+      [  
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Polygon",
+               "coordinates":[  
+                  [  
+                     [  
+                        -71.25085452012718,
+                        42.57567193126245
+                     ],
+                     [  
+                        -71.34964717551202,
+                        42.37302771950813
+                     ],
+                     [  
+                        -71.12992061301202,
+                        42.50680550763398
+                     ]
+                  ]
+               ]
+            },
+            "properties":{  
+               "name":"this is something new",
+               "description":"something else",
+               "routefee":"a fee goes here"
+            }
+         }
+      ]
+   ]
+}

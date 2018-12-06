@@ -83,8 +83,7 @@ ui.withdraw = `
 <button type="submit" class="btn btn-success" onclick="withdraw()">Submit</button>
 </form>
 </div>
-</div>
-`;
+</div>`;
 
 ui.transactions = `
 <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
@@ -96,10 +95,7 @@ ui.transactions = `
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
 </div>
 <button type="submit" class="btn btn-danger" onclick="transactions()">Show Transactions</button>
-</form>
-</div>
-</div>
-`;
+</form></div></div>`;
 
 ui.balance = `
 <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
@@ -125,13 +121,67 @@ ui.allData = `
 <div class="card-header">Get All Data</div>
 <div class="card-body">
 <form>
-<div class="form-group">
-</div>
+<div class="form-group"></div>
 <button type="submit" class="btn btn-light" onclick="allData();">Fetch</button>
 </form>
 </div>
 </div>
 `;
+
+ui.LandOwnerMap = `
+<div class="card bg-light mb-3" style="max-width: 18rem;">
+<div class="card-header">Enter a Route</div>
+<button type="submit" class="btn btn-dark" onclick="getLandOwnerMap();">Get Map</button>
+<div class="card-body">
+<form>
+<div class="form-group">
+<label for="routename">Route Name</label>
+<input type="name" class="form-control" id="routename" placeholder="Route Name">
+</div>
+<div class="form-group">
+<label for="routedescription">Description</label>
+<textarea class="form-control" id="routedescription" rows="3"></textarea>
+</div
+<div class="form-group">
+  <label for="routefee">Route Fee</label>
+  <div class="col-10">
+    <input class="form-control" type="number" value="2" id="routefee">
+  </div>
+</div>
+<button type="submit" class="btn btn-primary" onclick="submitLandOwnersMap()">Submit</button>
+</form>
+</div>
+</div>
+`;
+
+
+
+ui.DogWalkerMap = `
+<div class="card bg-light mb-3" style="max-width: 18rem;">
+<div class="card-header">Get Dog Walker Map</div>
+<div class="card-body">
+<form>
+<div class="form-group">
+</div>
+<button type="submit" class="btn btn-light" onclick="getDogWalkerMap();">Get Map</button>
+</form>
+</div>
+</div>
+`;
+
+ui.MyLocation = `
+<div class="card bg-light mb-3" style="max-width: 18rem;">
+<div class="card-header">Get MyLocation</div>
+<div class="card-body">
+<form>
+<div class="form-group">
+</div>
+<button type="submit" class="btn btn-light" onclick="getMyLocation();">Get Map</button>
+</form>
+</div>
+</div>
+`;
+
 
 var target     = document.getElementById('target');
 var navigation = document.getElementById('navigation');
@@ -169,6 +219,19 @@ var defaultModule = function(){
 
 var loadAllData = function(){
     target.innerHTML = ui.allData;
+};
+
+var loadLandOwnerMap = function(){
+    target.innerHTML = ui.LandOwnerMap;
+    
+};
+
+var loadDogWalkerMap = function(){
+    target.innerHTML = ui.DogWalkerMap;
+};
+
+var loadMyLocation = function(){
+    target.innerHTML = ui.MyLocation;
 };
 
 defaultModule();
